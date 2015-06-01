@@ -1,0 +1,34 @@
+1.- Escribir las historias de usuario de un Sistema de Gestión de Scrum con sus criterios de aceptación.
+
+---
+
+1. Configuración del proyecto.
+	- Seleccionar personas que entran en el sprint. Ver la disponibilidad de las personas que entran en el sprint
+	- Seleccionar duración del sprint
+	- Asignar roles
+
+2. Configuración del product backlog
+	- Gestionar historia de usuario
+	- Ordenar (por prioridades - valor de negocio)
+
+3. Gestionar el sprint
+	- Añadir estimación a historias de usuario
+	- Gestionar sprint backlog
+	- Añadir subtareas a historia de usuario
+	- Iniciar sprint
+	- Añadir Definición de Listo
+
+4. Ejecutar sprint
+	- Asignar estatus de tarea y propietario
+	- Rechazar tarea dentro del sprint
+	- Actualizar tiempo restante de la tarea
+	- Finalizar el sprint
+
+5. Gestionar retrospectiva del sprint
+
+5. Reportes
+	- Consultar sprints terminados
+	- Ver burndown chart
+	- Consultar retrospectivas
+	- Consultar velocidad
+
