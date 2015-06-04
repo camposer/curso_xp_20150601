@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.rodolfoxp.model.HistoriaUsuario;
 
 public interface HistoriaUsuarioRepository 
-	extends JpaRepository<HistoriaUsuario, Long>,
-	HistoriaUsuarioRepositoryCustom {
+	extends JpaRepository<HistoriaUsuario, Long> {
 
 }

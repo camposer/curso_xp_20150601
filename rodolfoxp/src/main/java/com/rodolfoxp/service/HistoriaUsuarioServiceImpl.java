@@ -17,5 +17,14 @@ public class HistoriaUsuarioServiceImpl implements HistoriaUsuarioService {
 	public List<HistoriaUsuario> getHistoriasUsuario() {
 		return historiaUsuarioRepository.findAll();
 	}
+	
+	@Override
+	public void updateHistoria(HistoriaUsuario historia){
+
+		historiaUsuarioRepository.save(historia);
+
+	}
+
+
 
 }

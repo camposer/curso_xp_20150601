@@ -39,7 +39,6 @@
   </filter-mapping>
   
   <!-- Open session in view -->
-  <!-- 
   <filter>
     <filter-name>OpenEntityManagerInViewFilter</filter-name>
     <filter-class>
@@ -54,5 +53,8 @@
     <filter-name>OpenEntityManagerInViewFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  -->
+
+	<welcome-file-list>
+		<welcome-file>historia-usuario/listar.xp</welcome-file>
+	</welcome-file-list>
 </web-app>

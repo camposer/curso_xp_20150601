@@ -16,17 +16,19 @@ import com.rodolfoxp.repository.HistoriaUsuarioRepository;
 @ContextConfiguration(classes = JpaConfig.class)
 @Transactional
 public class HistoriaUsuarioRepositoryTest {
-	@Autowired
-	private HistoriaUsuarioRepository historiaUsuarioRepository;
-	
-	@Test
-	public void test() {
-		HistoriaUsuario hu1 = new HistoriaUsuario("Título #1", "Descripción #1");
-		HistoriaUsuario hu2 = new HistoriaUsuario("Título #2", "Descripción #2");
-		
-		historiaUsuarioRepository.save(hu1);
-		historiaUsuarioRepository.save(hu2);
-		
-		Assert.assertTrue(historiaUsuarioRepository.findAll().size() == 2);
-	}
+  @Autowired
+  private HistoriaUsuarioRepository historiaUsuarioRepository;
+
+  @Test
+  public void test() {
+    HistoriaUsuario hu1 = new HistoriaUsuario("Título #1", "Descripción #1",
+            "rol#1", "para#1");
+    HistoriaUsuario hu2 = new HistoriaUsuario("Título #2", "Descripción #2",
+            "rol#1", "para#1");
+
+    historiaUsuarioRepository.save(hu1);
+    historiaUsuarioRepository.save(hu2);
+
+    Assert.assertTrue(historiaUsuarioRepository.findAll().size() >= 2);
+  }
 }

@@ -26,21 +26,47 @@
 		}
 	</style>
 </head>
+<script type="text/javascript">
+
+	function modificar(id, titulo, descripcion){
+
+
+		document.formModificar.elements["id"].value = id;
+		document.formModificar.elements["titulo"].value = titulo;
+		document.formModificar.elements["descripcion"].value = descripcion;
+
+		document.formModificar.submit();
+				
+	}
+</script>
 <body>
 	<div class="header">
 		<h1>Historias de Usuario</h1>
 	</div>
+	<form name="formModificar" method="POST" action="/rodolfoxp/modificar-historia-usuario/modificar.xp" >
+		<input type="hidden" name="titulo" value="${hu.titulo}"/>
+		<input type="hidden" name="descripcion" value="${hu.descripcion}"/>
+		<input type="hidden" name="id" value="${hu.id}"/>
 	
-	<div class="container">
-		<ul class="list-group">
-		<c:forEach items="${historiasUsuario}" var="hu">
-			<li class="list-group-item">
-				<h3>${hu.titulo}</h3>
-				<div>${hu.descripcion}</div>
-			</li>
-		</c:forEach>
-		</ul>
-	</div>
+		<div class="container">
+			<ul class="list-group">
+			<c:forEach items="${historiasUsuario}" var="hu"  varStatus="loop">
+				<li class="list-group-item">
+					<h3>${hu.titulo}</h3>
+					<div>${hu.descripcion}</div>				
+					
+					<input type="button" value="Modificar" name="boton${loop.index}" onclick="modificar(${hu.id},'${hu.titulo}','${hu.descripcion}')">
+					
+				</li>
+			</c:forEach>
+			</ul>
+		</div>
+				
+	</form>
+	<form method="post" action="/rodolfoxp/gestionar-historia-usuario/listar.xp">
+		<input type="submit" value="Gestionar Historias"/>
+	</form>
+	
 	
 	<script src="/rodolfoxp/js/bootstrap.js"></script>
 </body>

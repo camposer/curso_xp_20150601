@@ -7,5 +7,6 @@ import com.rodolfoxp.model.HistoriaUsuario;
 public interface HistoriaUsuarioService {
 
 	List<HistoriaUsuario> getHistoriasUsuario();
+	void updateHistoria(HistoriaUsuario historia);
 	
 }
